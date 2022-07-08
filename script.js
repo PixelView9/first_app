@@ -25,3 +25,13 @@ const personalMovieDb = {
 
 
 console.log(personalMovieDb);
+
+let ham = 3,
+    fries = 3,
+    cola = 0,
+    nuggets = 5;
+
+console.log(ham === 3 && cola === 2 || fries === 3 && nuggets === 2);
+console.log(ham === 3 && cola === 2 || fries === 3 && nuggets === 5);
+console.log(ham === 3 && cola === 2 || fries === 3 && nuggets);
+
