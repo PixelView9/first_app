@@ -1,4 +1,3 @@
-'strict mode';
-
-const num = 50;
-
+for (let i = 0; i < 3; i++){
+    console.log(i);
+}
