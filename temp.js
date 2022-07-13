@@ -1,14 +1,18 @@
-const lines = 5;
+const lines = 9;
 let result = '';
 
 for (let i = 0; i <= lines; i++) {
-    for (let j = 0; j < lines - i; j++) {
-        result += " ";
-    }
-    for (let j = 0; j < 2 * i + 1; j++) {
-        result += "*";
-    }
-    result += "\n";
-}
 
+    let lengthOfString = i + lines + 1;
+    let countOfBreaks = lines - i;
+    for (let j = 0; j < lengthOfString; j++) {
+
+        if (j < countOfBreaks) {
+            result += ' ';
+        } else {
+            result += '*';
+        }
+    }
+    result += '\n';
+}
 console.log(result);
