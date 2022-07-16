@@ -10,25 +10,16 @@ const personalMovieDb = {
     privat: false
 };
 
-    // const answer1 = prompt("Один из поcледних просмотренных фильмов", ''),
-    //       answer2 = prompt("На сколько оцените его?", ),
-    //       answer3 = prompt("Один из псоледних просмотренных фильмов", ''),
-    //       answer4 = prompt("На сколько оцените его?", );
+for (let i = 0; i < 2; i++) {
 
-    let answer1;
-    let answer2;
+    const a = prompt("Один из поcледних просмотренных фильмов", ''),
+        b = prompt("На сколько оцените его?", '');
 
-    for(let i = 0; i < 4; i++){
-       
-        if(i%2 === 0){
-            answer1 = prompt("Один из поcледних просмотренных фильмов", '');
-        } else {
-            answer2 = prompt("На сколько оцените его?", );
-
-            personalMovieDb.movies[answer1] = answer2;
-        } 
-    }  
+    if (a != null && b != null && a != '' && b != '' && a.length < 50 && b.length < 50) {
+        personalMovieDb.movies[a] = b;
+    } else {
+        i--;
+    }
+}
 
 console.log(personalMovieDb);
-
-
