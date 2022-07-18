@@ -16,3 +16,20 @@ for (let i = 0; i <= lines; i++) {
     result += '\n';
 }
 console.log(result);
+
+const usdCurr = 28;
+const discount = 0.9;
+
+function convert(amount, curr){
+    return (curr * amount);
+}
+
+convert(500, usdCurr);
+
+function promotion(result){
+    console.log(result * discount);
+}
+
+const res = convert(500, usdCurr); 
+
+promotion(res);
