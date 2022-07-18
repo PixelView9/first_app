@@ -1,35 +1,15 @@
-const lines = 9;
-let result = '';
+'strict mode';
 
-for (let i = 0; i <= lines; i++) {
+let bases = 5;
+let numTimes = 10;
+let str = '';
+for (let i = 0; i < 5; i++){
 
-    let lengthOfString = i + lines + 1;
-    let countOfBreaks = lines - i;
-    for (let j = 0; j < lengthOfString; j++) {
-
-        if (j < countOfBreaks) {
-            result += ' ';
-        } else {
-            result += '*';
-        }
-    }
-    result += '\n';
-}
-console.log(result);
-
-const usdCurr = 28;
-const discount = 0.9;
-
-function convert(amount, curr){
-    return (curr * amount);
+if(i%2 === 0){
+    str += `${bases * i}-----`;
+} else {
+    str += `${bases * i}+++++`;
 }
 
-convert(500, usdCurr);
-
-function promotion(result){
-    console.log(result * discount);
 }
-
-const res = convert(500, usdCurr); 
-
-promotion(res);
+console.log(str);
