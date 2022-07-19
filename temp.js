@@ -1,9 +1,6 @@
 'strict mode';
 
-let a = 3;
-function addTwo(x) {
-let ret = x + 2;
-return ret;
-}
-let b = addTwo(a);
-console.log(b);
+// Сравните этот результат с результатом Math.round(1.005, -2) из следующего примера
+let x = Math.round(1.005*100)/100;
+console.log(x);
+console.log(Math.round(1.005, -2));
