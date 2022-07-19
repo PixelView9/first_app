@@ -1,15 +1,9 @@
 'strict mode';
 
-let bases = 5;
-let numTimes = 10;
-let str = '';
-for (let i = 0; i < 5; i++){
-
-if(i%2 === 0){
-    str += `${bases * i}-----`;
-} else {
-    str += `${bases * i}+++++`;
+let a = 3;
+function addTwo(x) {
+let ret = x + 2;
+return ret;
 }
-
-}
-console.log(str);
+let b = addTwo(a);
+console.log(b);
