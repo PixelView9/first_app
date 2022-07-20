@@ -1,6 +1,4 @@
 'strict mode';
 
-let str = 'something nice';
-
-console.log(str.substr(5, 3));
-console.log(str);
+let str = '';
+console.log( 'Österreich'.localeCompare('Zealand') );
