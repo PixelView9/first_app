@@ -55,20 +55,22 @@ function detectPersonalLevel() {
 
 detectPersonalLevel();
 
-function showMyDB(){
-    if(!personalMovieDb.privat){
+function showMyDB(hidden){
+    if(!hidden){
         console.log(personalMovieDb);
     }
 }
 
-showMyDB();
+showMyDB(personalMovieDb.privat);
 
 function writeYourGenres(){
 
     for (let i = 1; i <= 3; i++){
-        const favorite = prompt('Ваш любимый жанр под номером ${i}', '');
+        const favorite = prompt(`Ваш любимый жанр под номером ${i}`, '');
         if(favorite != '' && favorite != null){
             personalMovieDb.genres[i-1] = favorite;    
+        } else {
+            i--;
         }
     }
 }
