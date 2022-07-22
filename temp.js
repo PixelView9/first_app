@@ -2,10 +2,6 @@
 
 function calculate(length){
 
-    // console.log(typeof(length));
-    // console.log(typeof(length) !== 'number');
-    // console.log(parseInt(length) != length);
-
     if(typeof(length) !== 'number' || parseInt(length) != length || length < 0) {
         return 'При вычислении произошла ошибка';
     } else {
@@ -14,4 +10,4 @@ function calculate(length){
     
 }
 
-console.log(calculate(-15));
+console.log(calculate(0));
