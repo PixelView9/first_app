@@ -1,13 +1,14 @@
 'strict mode';
 
-function calculate(length){
+function calculateNumberOfCoupe(seat){
 
-    if(typeof(length) !== 'number' || parseInt(length) != length || length < 0) {
-        return 'При вычислении произошла ошибка';
+    if(typeof(seat) !== 'number' || seat < 0 || Number.isInteger(seat)){
+        return ('Ошибка. Проверьте правильность введенного номера места'); 
+    } else if (seat === 0 || seat > 36){
+        return ('Таких мест в вагоне не существует');
     } else {
-        return (`Объем куба: ${length * length * length}, площадь всей поверхности: ${length * length * 6}`);
+        return (Math.floor(seat/4) + 1);
     }
-    
 }
 
-console.log(calculate(0));
+calculateNumberOfCoupe(15);
