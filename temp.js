@@ -1,14 +1,39 @@
 'strict mode';
 
-function calculateNumberOfCoupe(seat){
+function getTimeFromMinutes(quantity) {
 
-    if(typeof(seat) !== 'number' || seat < 0 || Number.isInteger(seat)){
-        return ('Ошибка. Проверьте правильность введенного номера места'); 
-    } else if (seat === 0 || seat > 36){
-        return ('Таких мест в вагоне не существует');
+    if (typeof (quantity) !== 'number' || !Number.isInteger(quantity) || quantity < 0) {
+        return 'Ошибка проверьте данные';
     } else {
-        return (Math.floor(seat/4) + 1);
+        const wholeHours = Math.floor(quantity / 60);
+        const minutes = quantity % 60;
+
+        const hoursNumeric = calculateEnding(wholeHours);
+
+        return `Это ${wholeHours} ${hoursNumeric}, ${minutes} минут.`;
+    }
+
+}
+
+function calculateEnding(wholeHours) {
+    
+    switch (wholeHours) {
+        case 1:
+            return 'час';
+        case 2:
+            return 'часа';
+        case 3:
+            return 'часа';
+        case 4:
+            return 'часа';
+            // break;
+        default:
+            return 'часов';
+
     }
 }
 
-calculateNumberOfCoupe(15);
+console.log(getTimeFromMinutes(150));
+console.log(getTimeFromMinutes(50));
+console.log(getTimeFromMinutes(0));
+console.log(getTimeFromMinutes(-150));
