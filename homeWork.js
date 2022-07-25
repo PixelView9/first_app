@@ -1,34 +1,21 @@
 // Место для первой задачи
-function getTimeFromMinutes(quantity) {
+function findMaxNumber(a, b, c, d){
 
-    if (typeof (quantity) !== 'number' || !Number.isInteger(quantity) || quantity < 0) {
-        return 'Ошибка, проверьте данные';
-    } else {
-        const wholeHours = Math.floor(quantity / 60);
-        const minutes = quantity % 60;
+    if(typeof(a) !== 'number' || typeof(b) !== 'number' || typeof(c) !== 'number' || typeof(d) !== 'number'){
+        return 0;
+    }
 
-        // const hoursNumeric = calculateEnding(wholeHours);
+    let maxNumber = 0;
+    let arr = [a, b, c, d];
 
-        let hoursNumeric;
-
-        switch (wholeHours) {
-            case 1:
-                hoursNumeric = 'час';
-                break;
-            case 2:
-                hoursNumeric = 'часа';
-                break;
-            case 3:
-                hoursNumeric = 'часа';
-                break;
-            case 4:
-                hoursNumeric = 'часа';
-                break;
-            default:
-                hoursNumeric = 'часов';
-                break;
+    arr.forEach(element => {
+        if(element > maxNumber){
+            maxNumber = element;
         }
+        
+    });
 
-        return `Это ${wholeHours} ${hoursNumeric} и ${minutes} минут`;
+    return maxNumber;
 }
-}
+
+console.log(findMaxNumber(3, -15551, 501));
