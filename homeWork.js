@@ -1,12 +1,24 @@
 // Место для первой задачи
-function findMaxNumber(a, b, c, d){
+function fib(x){
 
-    if(typeof(a) !== 'number' || typeof(b) !== 'number' || typeof(c) !== 'number' || typeof(d) !== 'number'){
-        return 0;
-    } else {
-        return Math.max(a, b, c, d);
+    if(typeof(x)!=='number'){
+        return "";
     }
+
+    let str = '0 1';
+    let firstNum = 0;
+    let secondNum = 1;
+    let tempNum = 0;
+    
+    for (let i = 2; i <= x; i++){
+        tempNum = firstNum;
+        firstNum = secondNum;
+        secondNum += tempNum;
+        str += ` ${secondNum}`;
+    }
+
+    return str;
 
 }
 
-console.log(findMaxNumber(3, -15551, 501, 15));
+console.log(fib(7));
