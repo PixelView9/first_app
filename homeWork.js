@@ -5,15 +5,18 @@ function fib(x){
         return "";
     }
 
-    let str = '0 1';
+    let str = '';
     let firstNum = 0;
-    let secondNum = 1;
+    let secondNum = 0;
     let tempNum = 0;
     
-    for (let i = 2; i <= x; i++){
+    for (let i = 0; i < x; i++){
         tempNum = firstNum;
         firstNum = secondNum;
         secondNum += tempNum;
+        if(i === 1){
+            secondNum = 1;
+        }
         str += ` ${secondNum}`;
     }
 
@@ -21,4 +24,4 @@ function fib(x){
 
 }
 
-console.log(fib(7));
+console.log(fib(9));
