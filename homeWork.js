@@ -1,7 +1,7 @@
 // Место для первой задачи
 function fib(x){
 
-    if(typeof(x)!=='number'){
+    if(typeof(x)!=='number' || !Number.isInteger(x)){
         return "";
     }
 
