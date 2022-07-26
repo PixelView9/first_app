@@ -17,7 +17,12 @@ function fib(x){
         if(i === 1){
             secondNum = 1;
         }
-        str += ` ${secondNum}`;
+        if(i === 0){
+            str += `${secondNum}`;
+        } else {
+            str += ` ${secondNum}`;
+        }
+        
     }
 
     return str;
