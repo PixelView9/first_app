@@ -10,3 +10,5 @@ function extractCurrencyValue(str){
 }
 
 console.log(extractCurrencyValue(`$120`));
+
+console.log();
