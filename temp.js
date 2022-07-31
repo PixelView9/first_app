@@ -1,4 +1,4 @@
-'strict mode';
+'use strict';
 
 const options = {
     name: `test`,
@@ -24,4 +24,4 @@ for (let key in options) {
     console.log(`Свойство ${key}: ${options[key]}`);
 }
 
-
+                               
