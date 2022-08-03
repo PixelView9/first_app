@@ -23,5 +23,3 @@ for (let key in options) {
 
     console.log(`Свойство ${key}: ${options[key]}`);
 }
-
-                               
